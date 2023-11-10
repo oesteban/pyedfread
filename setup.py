@@ -35,8 +35,8 @@ elif sys.platform.startswith('win32'):
             'libraries': lib_names
             }
 else:  # linux, unix, cygwin
-    args = {'include_dirs': [numpy.get_include(), 'include/'],
-            'library_dirs': ['lib/'],
+    args = {'include_dirs': [numpy.get_include(), '/usr/include/EyeLink'],
+            'library_dirs': ['/usr/lib/x86_64-linux-gnu'],
             'libraries': ['edfapi'],
             'extra_compile_args': ['-fopenmp'],
             'extra_link_args': ['-fopenmp']}
